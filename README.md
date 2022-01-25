@@ -1,8 +1,8 @@
-# PostgreSQL Master
+# PostgreSQL HA with pg_auto_failover
 
 ## Introduction
 
-PostgreSQL(also known as postgres) is one of the most advanced open-source relational database management systems with SQL compliance. AppZ currently offers PostgreSQL-12.2 with following added features out of the box :
+PostgreSQL(also known as postgres) is one of the most advanced open-source relational database management systems with SQL compliance. This repository will deploy  PostgreSQL-13.3 HA as Kubernetes Statefulsets as per pg_auto_failover guidelines(https://pg-auto-failover.readthedocs.io).
 
 1. Fully managed stateful PostgreSQL-12.2 deployment using GitOps from Client Git repository.
 1. Configure Master/Slave deployment for HA/DR capability
