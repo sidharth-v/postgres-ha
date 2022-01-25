@@ -1,7 +1,7 @@
 app:
     name: Postgres HA Replica
     code: POSTGRESHAREPLICA
-    notify: skumar@ecloudcontrol.com
+    notify: appz@ecloudcontrol.com
     
 build:
     version: 13.X
@@ -11,7 +11,7 @@ build:
     image_template: postgres_ha-13.3
     
 deploy:
-    context: skumarpi/DEV
+    context: alpha/DEV
     type: statefulset
     replicas: 3
     port:
