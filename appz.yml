@@ -38,6 +38,12 @@ properties:
     POSTGRESQL_CONNECTUSER: postgres
     POSTGRESQL_CONNECTIONDB: postgres
     POSTGRESQL_PORT: 5432
+    PUSH_BACKUP_WEBDAV: True
+    DAV_FOLDER:  /
+    DAV_USER:  appz
+    DAV_USERPASSWORD: 
+      vault: DAV_USERPASSWORD
+    WEBDAV_BACKUP_URL: https://minnaniju-dev-webdav-2-0.038c839d.lowtouch.cloud/
     POSTGRESQL_PASSWORD: 
       vault: POSTGRESQL_PASSWORD
     POSTGRESQL_SPRINGBOOTWEB_PASSWORD:
