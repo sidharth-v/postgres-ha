@@ -2,9 +2,6 @@ users:
   - name: springbootweb
     password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
     role: superuser
-  - name: dotnet
-    password: $POSTGRESQL_DOTNET_PASSWORD
-    role: superuser
 databases:
   - name: springbootweb
     owner: springbootweb
@@ -15,19 +12,10 @@ databases:
       - name: schema1
         authorised_user: springbootweb
         search_path: true
-  - name: dotnet
-    owner: dotnet
-    tablespace:
-      - name: tb2
-        location: /appz/data/tb2
-    schemas:
-      - name: schema2
-        authorised_user: dotnet
-        search_path: true
 restore:
   - database: springbootweb
     source:
       url: 'https://www.ecloudcontrol.com/wp-content/uploads/2022/01/accountsdb-springboot.sql_.zip'
     user: springbootweb
     password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
-    token: 20220209-1600
+    token: 20220303-0640
