@@ -1,7 +1,7 @@
 app:
     name: Postgres HA
     code: POSTGRESHA
-    notify: appz@ecloudcontrol.com
+    notify: mniju@ecloudcontrol.com
     
 build:
     version: 13.X
@@ -11,7 +11,7 @@ build:
     image_template: postgres_ha-13.3
     
 deploy:
-    context: alpha/DEV
+    context: minnaniju/DEV
     type: statefulset
     replicas: 3
     port:
