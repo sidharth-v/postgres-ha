@@ -42,4 +42,4 @@ properties:
       vault: POSTGRESQL_PASSWORD
     POSTGRESQL_SPRINGBOOTWEB_PASSWORD:
           vault: POSTGRESQL_SPRINGBOOTWEB_PASSWORD
-    revision : 87
+    revision : 88
