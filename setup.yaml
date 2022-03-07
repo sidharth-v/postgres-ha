@@ -20,4 +20,4 @@ restore:
       password: $DAV_USERPASSWORD
     user: springbootweb
     password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
-    token: 20220304-0529
+    token: 20220307-0515
