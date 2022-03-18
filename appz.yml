@@ -26,11 +26,13 @@ volumes:
     mode: ReadWriteOnce   
   - claim: postgres-replica-home
     mount: /appz/home
+    class: microk8s-hostpath
     name: home
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-backup
     mount: /appz/backup
+    class: microk8s-hostpath 
     name: backup
     size: 5Gi
     mode: ReadWriteOnce  
