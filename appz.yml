@@ -20,6 +20,7 @@ deploy:
 volumes:
   - claim: postgres-replica-data
     mount: /appz/data
+    class: microk8s-hostpath
     name: data
     size: 5Gi
     mode: ReadWriteOnce   
