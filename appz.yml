@@ -20,16 +20,19 @@ deploy:
     
 volumes:
   - claim: postgres-replica-data
+    class: microk8s-hostpath
     mount: /appz/data
     name: data
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-home
+    class: microk8s-hostpath
     mount: /appz/home
     name: home
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-backup
+    class: microk8s-hostpath
     mount: /appz/backup 
     name: backup
     size: 5Gi
