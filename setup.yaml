@@ -15,9 +15,7 @@ databases:
 restore:
   - database: springbootweb
     source:
-      url: 'https://minnaniju-dev-webdav-2-0.038c839d.lowtouch.cloud/accountsdb-springboot.sql'
-      user: appz
-      password: $DAV_USERPASSWORD
+      url: 'https://www.ecloudcontrol.com/wp-content/uploads/2021/06/accountsdb-springboot.sql_.zip'
     user: springbootweb
     password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
     token: 20220404-0659
