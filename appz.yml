@@ -55,4 +55,4 @@ properties:
     DAV_READONLY_USER: appz_readonly
     DAV_READONLY_USERPASSWORD: 
        vault: DAV_READONLY_USERPASSWORD
-    revision : 73
+    revision : 74
