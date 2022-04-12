@@ -13,7 +13,7 @@ build:
 deploy:
     context: minnaniju/DEV
     type: statefulset
-    replicas: 3
+    replicas: 4
     port:
     - 5432
     - 9187 
