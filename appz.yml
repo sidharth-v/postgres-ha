@@ -1,7 +1,7 @@
 app:
     name: Postgres HA
     code: POSTGRESHA
-    notify: mniju@ecloudcontrol.com
+    notify: svengathattil@ecloudcontrol.com
     
 build:
     version: 13.X
@@ -11,7 +11,7 @@ build:
     image_template: postgres_ha-13.3
     
 deploy:
-    context: minnaniju/DEV
+    context: sidharth-v/DEV
     type: statefulset
     replicas: 3
     port:
@@ -20,19 +20,16 @@ deploy:
     
 volumes:
   - claim: postgres-replica-data
-    class: microk8s-hostpath
     mount: /appz/data
     name: data
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-home
-    class: microk8s-hostpath
     mount: /appz/home
     name: home
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-backup
-    class: microk8s-hostpath
     mount: /appz/backup 
     name: backup
     size: 5Gi
@@ -42,17 +39,17 @@ properties:
     POSTGRESQL_CONNECTUSER: postgres
     POSTGRESQL_CONNECTIONDB: postgres
     POSTGRESQL_PORT: 5432
-    PUSH_BACKUP_WEBDAV: True
-    DAV_FOLDER:  /
-    DAV_USER:  appz
-    DAV_USERPASSWORD: 
-      vault: DAV_USERPASSWORD
-    WEBDAV_BACKUP_URL: https://minnaniju-dev-webdav-2-0.038c839d.lowtouch.cloud/
+    #PUSH_BACKUP_WEBDAV: True
+    #DAV_FOLDER:  /
+   # DAV_USER:  appz
+    #DAV_USERPASSWORD: 
+     # vault: DAV_USERPASSWORD
+    #WEBDAV_BACKUP_URL: https://minnaniju-dev-webdav-2-0.038c839d.lowtouch.cloud/
     POSTGRESQL_PASSWORD: 
       vault: POSTGRESQL_PASSWORD
     POSTGRESQL_SPRINGBOOTWEB_PASSWORD:
           vault: POSTGRESQL_SPRINGBOOTWEB_PASSWORD
-    DAV_READONLY_USER: appz_readonly
-    DAV_READONLY_USERPASSWORD: 
-       vault: DAV_READONLY_USERPASSWORD
+    #DAV_READONLY_USER: appz_readonly
+    #DAV_READONLY_USERPASSWORD: 
+    #   vault: DAV_READONLY_USERPASSWORD
     revision : 32
