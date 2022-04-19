@@ -7,7 +7,7 @@ databases:
     owner: springbootweb
     tablespace:
       - name: tb1
-        location: /appz/data/postgres_base/tb1
+        location: /appz/data/tb1
     schemas:
       - name: schema1
         authorised_user: springbootweb
@@ -18,4 +18,4 @@ restore:
       url: 'https://www.ecloudcontrol.com/wp-content/uploads/2021/06/accountsdb-springboot.sql_.zip'
     user: springbootweb
     password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
-    token: 20220419-1105
+    token: 20220419-1359
