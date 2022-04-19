@@ -7,7 +7,7 @@ databases:
     owner: springbootweb
     tablespace:
       - name: tb1
-        location: /appz/data/tb1
+        location: /appz/data/postgres_base/tb1
     schemas:
       - name: schema1
         authorised_user: springbootweb
