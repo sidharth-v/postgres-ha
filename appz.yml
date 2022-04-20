@@ -20,22 +20,16 @@ deploy:
     
 volumes:
   - claim: postgres-replica-data
-    class: openebs-replicated
-    matchLabels: false
     mount: /appz/data
     name: data
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-home
-    class: openebs-replicated
-    matchLabels: false
     mount: /appz/home
     name: home
     size: 5Gi
     mode: ReadWriteOnce   
   - claim: postgres-replica-backup
-    class: openebs-replicated
-    matchLabels: false
     mount: /appz/backup 
     name: backup
     size: 5Gi
